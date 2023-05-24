@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main() {
+  int arr[] = {10, 20, 30, 40, 50};
+  int n = sizeof(arr) / sizeof(arr[0]);
+  int key;
+  printf("Enter the key to search: ");
+  scanf("%d", &key);
+  int i;
+  for (i = 0; i < n; i++) {
+    if (arr[i] == key) {
+      printf("The key is found at index %d\n", i);
+      break;
+    }
+  }
+  if (i == n) {
+    printf("The key is not found\n");
+  }
+  return 0;
+}

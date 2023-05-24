@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+  int cubic_feet;
+  float bill;
+  printf("Enter the number of cubic feet of water used: ");
+  scanf("%d", &cubic_feet);
+  if (cubic_feet <= 100) {
+    bill = cubic_feet * 0.05;
+  } else if (cubic_feet <= 200) {
+    bill = 50 + (cubic_feet - 100) * 0.07;
+  } else {
+    bill = 100 + (cubic_feet - 200) * 0.10;
+  }
+  printf("The water bill is $%.2f\n", bill);
+  return 0;
+}
